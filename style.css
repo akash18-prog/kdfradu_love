@@ -1,66 +1,90 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(#050505, #0b132b);
-  color: white;
-  text-align: center;
+body{
+  margin:0;
+  font-family:'Segoe UI',sans-serif;
+  background:linear-gradient(#020024,#090979,#000);
+  color:white;
+  text-align:center;
+  overflow-x:hidden;
 }
 
-#lockScreen {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+section{padding:50px 20px}
+
+#lock{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
 }
 
-#lockScreen input, button {
-  padding: 12px;
-  margin: 10px;
-  border-radius: 8px;
-  border: none;
+input,button{
+  padding:12px;
+  margin:10px;
+  border-radius:12px;
+  border:none;
 }
 
-button {
-  background: #ff4d6d;
-  color: white;
-  font-size: 16px;
+button{
+  background:#ff4d6d;
+  color:white;
+  font-size:16px;
 }
 
-#content { display: none; }
+#content{display:none}
 
-section {
-  padding: 40px 20px;
+.hero h1{font-size:36px}
+
+.box{
+  background:rgba(255,255,255,0.12);
+  border-radius:18px;
+  padding:20px;
+  margin:20px;
+  animation:fadeUp 1s ease;
 }
 
-.hero h1 {
-  font-size: 36px;
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
 }
 
-.letter {
-  background: rgba(255,255,255,0.05);
-  border-radius: 12px;
+.memory{
+  background:rgba(255,255,255,0.12);
+  margin:20px auto;
+  padding:15px;
+  width:90%;
+  border-radius:12px;
 }
 
-.timeline .memory {
-  margin: 20px auto;
-  padding: 15px;
-  width: 90%;
-  background: rgba(255,255,255,0.08);
-  border-radius: 10px;
+.memory span{
+  color:#ffd166;
+  font-weight:bold;
 }
 
-.timeline span {
-  display: block;
-  font-weight: bold;
-  color: #ffb703;
+.gallery .photos{
+  display:flex;
+  gap:15px;
+  overflow-x:scroll;
 }
 
-.proposal button {
-  font-size: 20px;
+.gallery img{
+  width:75%;
+  border-radius:18px;
+  flex-shrink:0;
+  box-shadow:0 10px 20px rgba(0,0,0,0.5);
+  transition:transform 0.3s;
 }
 
-footer {
-  padding: 20px;
-  font-size: 14px;
-  opacity: 0.8;
+.gallery img:active{
+  transform:scale(1.05);
+}
+
+.hidden{display:none}
+
+.proposal button{
+  font-size:20px;
+  padding:15px 30px;
+}
+
+footer{
+  padding:30px;
+  opacity:0.8;
 }

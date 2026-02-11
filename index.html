@@ -8,61 +8,87 @@
 </head>
 <body>
 
-<!-- Password Screen -->
-<div id="lockScreen">
+<!-- 🔐 LOCK SCREEN -->
+<div id="lock">
   <h2>🔐 Only for Kutty Ma</h2>
-  <input type="password" id="password" placeholder="Enter our secret">
+  <input type="password" id="password" placeholder="Our secret">
   <button onclick="unlock()">Open My Heart ❤️</button>
   <p id="error"></p>
 </div>
 
-<!-- Main Content -->
+<!-- 🌙 MAIN CONTENT -->
 <div id="content">
 
-  <audio id="bgMusic" loop>
-    <source src="song.mp3" type="audio/mpeg">
-  </audio>
+<audio id="music" loop>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
 
-  <section class="hero">
-    <h1>Kutty Ma ❤️</h1>
-    <p>From Fradu… with all my love</p>
-    <button onclick="playMusic()">🎵 Play Our Song</button>
-  </section>
+<section class="hero">
+  <h1>Kutty Ma ❤️</h1>
+  <p>From Fradu — forever yours</p>
+</section>
 
-  <section class="letter">
-    <h2>💌 My Love Letter</h2>
-    <p id="typing"></p>
-  </section>
+<section class="box">
+  <h2>💌 Love Letter</h2>
+  <p id="typing"></p>
+</section>
 
-  <section class="countdown">
-    <h2>⏳ Valentine’s Day Countdown</h2>
-    <div id="timer"></div>
-  </section>
+<section class="timeline">
+  <h2>📜 Our Memories</h2>
 
-  <section class="timeline">
-    <h2>📜 Our Beautiful Memories</h2>
+  <div class="memory"><span>13 Oct</span>You entered my life… everything changed.</div>
+  <div class="memory"><span>05 Nov</span>You cried missing me… I felt needed.</div>
+  <div class="memory"><span>20 Oct</span>Your birthday… my favorite day.</div>
+  <div class="memory"><span>01 Dec</span>Last block… never last love.</div>
+  <div class="memory"><span>20 Dec</span>You lost your father… I stood as your strength.</div>
+  <div class="memory"><span>05 Mar</span>First video call… heart melted.</div>
+  <div class="memory"><span>13 May</span>First breakup… love stayed.</div>
+  <div class="memory"><span>10 Oct</span>Patch up… destiny won.</div>
+  <div class="memory"><span>20 Oct 2023</span>First meet… unplanned magic.</div>
+  <div class="memory"><span>20 Oct 2024</span>Second meet… deeper bond.</div>
+  <div class="memory"><span>04 Jul 2025</span>Third meet… forever feeling.</div>
+  <div class="memory"><span>Forever</span>Unlimited calls… you gave me everything.</div>
+</section>
 
-    <div class="memory"><span>05 Nov</span>The first time you cried for me… I realised I mattered ❤️</div>
-    <div class="memory"><span>01 Dec</span>The last time I blocked you… not my heart 💔</div>
-    <div class="memory"><span>05 Mar</span>Our first video call… I fell deeper 📱</div>
-    <div class="memory"><span>13 May</span>Our first breakup… but love stayed 🤍</div>
-    <div class="memory"><span>10 Oct</span>We patched up… stronger 🫶</div>
-    <div class="memory"><span>20 Oct 2023</span>First meet… I surprised you 💐</div>
-    <div class="memory"><span>20 Oct 2024</span>Second meet… same date, deeper love 💖</div>
-    <div class="memory"><span>04 Jul 2025</span>Third meet… forever feeling ✨</div>
-    <div class="memory"><span>Forever</span>You came when I was alone… now I have everything ❤️</div>
+<section class="gallery">
+  <h2>📸 Our Moments</h2>
+  <div class="photos">
+    <img src="photos/p1.jpg">
+    <img src="photos/p2.jpg">
+    <img src="photos/p3.jpg">
+    <img src="photos/p4.jpg">
+    <img src="photos/p5.jpg">
+    <img src="photos/p6.jpg">
+    <img src="photos/p7.jpg">
+    <img src="photos/p8.jpg">
+    <img src="photos/p9.jpg">
+    <img src="photos/p10.jpg">
+  </div>
+</section>
 
-  </section>
+<section id="secret" class="box hidden">
+  <h2>🤍 One Truth</h2>
+  <p>
+    Kutty Ma…  
+    En life-la perfect days theva illa.  
+    Nee irundha podhum ❤️
+  </p>
+</section>
 
-  <section class="proposal">
-    <h2>💍 My Question</h2>
-    <p>Kutty Ma… will you be mine forever?</p>
-    <button onclick="yes()">YES ❤️</button>
-  </section>
+<section class="countdown">
+  <h2>⏳ Valentine Countdown</h2>
+  <div id="timer"></div>
+</section>
 
-  <footer>
-    Made with infinite love by Fradu 🖤
-  </footer>
+<section class="proposal">
+  <h2>💍 My Question</h2>
+  <p>Will you be mine forever?</p>
+  <button onclick="sayYes()">YES ❤️</button>
+</section>
+
+<footer>
+  Made with infinite love by Fradu 🖤
+</footer>
 
 </div>
 

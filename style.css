@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(#050505, #0b132b);
+  color: white;
+  text-align: center;
+}
+
+#lockScreen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#lockScreen input, button {
+  padding: 12px;
+  margin: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  background: #ff4d6d;
+  color: white;
+  font-size: 16px;
+}
+
+#content { display: none; }
+
+section {
+  padding: 40px 20px;
+}
+
+.hero h1 {
+  font-size: 36px;
+}
+
+.letter {
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+}
+
+.timeline .memory {
+  margin: 20px auto;
+  padding: 15px;
+  width: 90%;
+  background: rgba(255,255,255,0.08);
+  border-radius: 10px;
+}
+
+.timeline span {
+  display: block;
+  font-weight: bold;
+  color: #ffb703;
+}
+
+.proposal button {
+  font-size: 20px;
+}
+
+footer {
+  padding: 20px;
+  font-size: 14px;
+  opacity: 0.8;
+}

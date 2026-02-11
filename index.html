@@ -1,97 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Only for Kutty Ma ❤️</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kutty Ma ❤️ Fradu</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
+html{scroll-behavior:smooth}
+
+body{
+  background:#01010f;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* STAR SKY */
+canvas{
+  position:fixed;
+  inset:0;
+  z-index:-1;
+}
+
+/* LOCK */
+#lock{
+  position:fixed;inset:0;
+  background:black;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+#lock input{
+  padding:12px;
+  border-radius:25px;
+  border:none;
+  text-align:center;
+  width:220px;
+}
+#lock button{
+  margin-top:10px;
+  padding:10px 25px;
+  border:none;
+  border-radius:25px;
+  background:pink;
+  font-weight:bold;
+}
+
+/* SECTIONS */
+section{
+  min-height:100vh;
+  padding:80px 20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+h1,h2{margin-bottom:20px}
+
+/* LETTER */
+#letter{
+  max-width:800px;
+  font-size:18px;
+  line-height:1.9;
+  white-space:pre-wrap;
+}
+
+/* HEARTBEAT */
+#heart{
+  font-size:80px;
+  animation:beat 1s infinite;
+}
+@keyframes beat{
+  0%{transform:scale(1)}
+  25%{transform:scale(1.2)}
+  40%{transform:scale(1)}
+  60%{transform:scale(1.15)}
+  100%{transform:scale(1)}
+}
+
+/* MEMORY */
+.memory{
+  background:rgba(255,255,255,0.08);
+  padding:15px;
+  margin:10px;
+  border-radius:15px;
+  max-width:800px;
+  animation:fadeUp 1s ease forwards;
+}
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:15px;
+  padding:20px;
+}
+.gallery img{
+  width:100%;
+  border-radius:15px;
+  box-shadow:0 0 30px rgba(255,0,120,0.6);
+  transition:0.6s;
+}
+.gallery img:hover{
+  transform:scale(1.25) rotate(2deg);
+}
+
+/* PROPOSAL */
+#ring{
+  font-size:90px;
+  animation:pulse 1.2s infinite;
+}
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.3)}
+  100%{transform:scale(1)}
+}
+
+/* SECRET */
+#secret{
+  opacity:0;
+  transition:1s;
+  margin-top:30px;
+  font-size:20px;
+  color:pink;
+}
+.show{opacity:1}
+</style>
 </head>
+
 <body>
 
-<!-- 🔐 LOCK SCREEN -->
+<canvas id="stars"></canvas>
+
 <div id="lock">
   <h2>🔐 Only for Kutty Ma</h2>
-  <input type="password" id="password" placeholder="Our secret">
-  <button onclick="unlock()">Open My Heart ❤️</button>
-  <p id="error"></p>
+  <input id="pass" type="password" placeholder="Our Secret ❤️">
+  <button onclick="unlock()">Enter</button>
 </div>
 
-<!-- 🌙 MAIN CONTENT -->
-<div id="content">
-
-<audio id="music" loop>
+<audio id="song" loop>
   <source src="song.mp3" type="audio/mpeg">
 </audio>
 
-<section class="hero">
-  <h1>Kutty Ma ❤️</h1>
-  <p>From Fradu — forever yours</p>
+<section>
+  <h1>🌌 Kutty Ma & Fradu 🌌</h1>
+  <p>Not just love… destiny ✨</p>
+  <div id="heart">❤️</div>
 </section>
 
-<section class="box">
-  <h2>💌 Love Letter</h2>
-  <p id="typing"></p>
+<section>
+  <h2>💌 My Letter to You</h2>
+  <div id="letter"></div>
 </section>
 
-<section class="timeline">
-  <h2>📜 Our Memories</h2>
-
-  <div class="memory"><span>13 Oct</span>You entered my life… everything changed.</div>
-  <div class="memory"><span>05 Nov</span>You cried missing me… I felt needed.</div>
-  <div class="memory"><span>20 Oct</span>Your birthday… my favorite day.</div>
-  <div class="memory"><span>01 Dec</span>Last block… never last love.</div>
-  <div class="memory"><span>20 Dec</span>You lost your father… I stood as your strength.</div>
-  <div class="memory"><span>05 Mar</span>First video call… heart melted.</div>
-  <div class="memory"><span>13 May</span>First breakup… love stayed.</div>
-  <div class="memory"><span>10 Oct</span>Patch up… destiny won.</div>
-  <div class="memory"><span>20 Oct 2023</span>First meet… unplanned magic.</div>
-  <div class="memory"><span>20 Oct 2024</span>Second meet… deeper bond.</div>
-  <div class="memory"><span>04 Jul 2025</span>Third meet… forever feeling.</div>
-  <div class="memory"><span>Forever</span>Unlimited calls… you gave me everything.</div>
+<section>
+  <h2>📅 Our Story</h2>
+  <div class="memory">Oct 13 – You entered my life</div>
+  <div class="memory">Nov 5 – You cried for me</div>
+  <div class="memory">Dec 20 – I became your father & shield</div>
+  <div class="memory">Mar 5 – First video call</div>
+  <div class="memory">May 13 – First breakup</div>
+  <div class="memory">Oct 10 – Patch up</div>
+  <div class="memory">Oct 20 2023 – First meet surprise</div>
+  <div class="memory">Oct 20 2024 – Second meet</div>
+  <div class="memory">Jul 4 2025 – Third meet</div>
 </section>
 
-<section class="gallery">
-  <h2>📸 Our Moments</h2>
-  <div class="photos">
-    <img src="photos/p1.jpg">
-    <img src="photos/p2.jpg">
-    <img src="photos/p3.jpg">
-    <img src="photos/p4.jpg">
-    <img src="photos/p5.jpg">
-    <img src="photos/p6.jpg">
-    <img src="photos/p7.jpg">
-    <img src="photos/p8.jpg">
-    <img src="photos/p9.jpg">
-    <img src="photos/p10.jpg">
+<section>
+  <h2>📸 Us</h2>
+  <div class="gallery">
+    <img src="p1.jpg"><img src="p2.jpg"><img src="p3.jpg">
+    <img src="p4.jpg"><img src="p5.jpg"><img src="p6.jpg">
+    <img src="p7.jpg"><img src="p8.jpg"><img src="p9.jpg">
+    <img src="p10.jpg">
   </div>
 </section>
 
-<section id="secret" class="box hidden">
-  <h2>🤍 One Truth</h2>
-  <p>
-    Kutty Ma…  
-    En life-la perfect days theva illa.  
-    Nee irundha podhum ❤️
-  </p>
+<section>
+  <div id="ring">💍</div>
+  <h2>Kutty Ma… Will you walk with me forever?</h2>
+  <p>(Tap the screen 7 times)</p>
+  <div id="secret">I am yours. In this life and every next one ♾️❤️</div>
 </section>
 
-<section class="countdown">
-  <h2>⏳ Valentine Countdown</h2>
-  <div id="timer"></div>
-</section>
+<script>
+/* UNLOCK */
+function unlock(){
+  if(pass.value==="kuttyma"){
+    lock.style.display="none";
+    song.play();
+  } else alert("Wrong secret 😌");
+}
 
-<section class="proposal">
-  <h2>💍 My Question</h2>
-  <p>Will you be mine forever?</p>
-  <button onclick="sayYes()">YES ❤️</button>
-</section>
+/* TYPE LETTER */
+const text=`Kutty Ma…
 
-<footer>
-  Made with infinite love by Fradu 🖤
-</footer>
+Nee vandha apram
+En life-la irundha silence kooda music aaiduchu.
 
-</div>
+You didn’t just love me.
+You gave me a reason to exist.
 
-<script src="script.js"></script>
+If love has a name…
+It’s YOU ❤️`;
+let i=0;
+(function type(){
+  if(i<text.length){
+    letter.innerHTML+=text[i++];
+    setTimeout(type,40);
+  }
+})();
+
+/* SECRET TAP */
+let taps=0;
+document.body.addEventListener("click",()=>{
+  taps++;
+  if(taps===7) document.getElementById("secret").classList.add("show");
+});
+
+/* STARS */
+const c=document.getElementById("stars"),ctx=c.getContext("2d");
+let w,h;function resize(){w=c.width=innerWidth;h=c.height=innerHeight}
+resize();onresize=resize;
+let stars=Array.from({length:200},()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.5}));
+(function draw(){
+  ctx.clearRect(0,0,w,h);
+  ctx.fillStyle="white";
+  stars.forEach(s=>{
+    ctx.beginPath();
+    ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+    ctx.fill();
+    s.y+=0.2;
+    if(s.y>h) s.y=0;
+  });
+  requestAnimationFrame(draw);
+})();
+</script>
+
 </body>
 </html>
